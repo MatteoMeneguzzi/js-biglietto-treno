@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	margin: auto;
+	background: #15aac6;
+	color: white;
+	font-family: "Syne", sans-serif;
+}
+
+h1 {
+	margin: auto;
+	width: 300px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid white;
+}
+
+i {
+	margin-right: 10px;
+}
+
+div.container {
+	width: 500px;
+	padding: 20px;
+	background-color: white;
+	color: grey;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px black;
+}
+
+/* UTILITIES */
+
+.blue {
+	color: #1f2258;
+}
+
+.fw600 {
+	font-weight: 600;
+}
+
+.lh30 {
+	line-height: 30px;
+}

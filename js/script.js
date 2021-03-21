@@ -18,13 +18,13 @@ var kiloMeters = parseInt(prompt("How many km are you going to cover?"));
 console.log("km: ", kiloMeters);
 
 if (isNaN(kiloMeters) === false) {
-	document.getElementById("kilometers").innerHTML = "Km: " + kiloMeters;
+	document.getElementById("kilometers").innerHTML = kiloMeters;
 } else {
 	document.getElementById("kilometers").innerHTML = "Please digit a number";
 }
 
 if (kiloMeters > 0) {
-	document.getElementById("kilometers").innerHTML = "Km: " + kiloMeters;
+	document.getElementById("kilometers").innerHTML = kiloMeters;
 } else {
 	document.getElementById("kilometers").innerHTML = "Please digit a number";
 }
@@ -34,13 +34,13 @@ var userAge = parseInt(prompt("How old are you?"));
 console.log("Age: ", userAge);
 
 if (isNaN(userAge) === false) {
-	document.getElementById("age").innerHTML = "Age: " + userAge;
+	document.getElementById("age").innerHTML = userAge;
 } else {
 	document.getElementById("age").innerHTML = "Please digit a number";
 }
 
 if (userAge >= 0) {
-	document.getElementById("age").innerHTML = "Age: " + userAge;
+	document.getElementById("age").innerHTML = userAge;
 } else {
 	document.getElementById("age").innerHTML = "Please digit a number";
 }
@@ -63,14 +63,18 @@ if (userAge < 18 && isNaN(userAge) === false) {
 
 price = parseFloat(price).toFixed(2);
 
-if (price >= 0) {
-	document.getElementById("price").innerHTML = "Price: " + price;
+if (kiloMeters >= 0) {
+	document.getElementById("price").innerHTML = price;
+} else if (userAge >= 0) {
+	document.getElementById("price").innerHTML = price;
+} else if (price >= 0) {
+	document.getElementById("price").innerHTML = price;
 } else {
 	document.getElementById("price").innerHTML = "Please digit a number";
 }
 
 if (isNaN(price) === false) {
-	document.getElementById("price").innerHTML = "Price: " + price;
+	document.getElementById("price").innerHTML = price;
 } else {
 	document.getElementById("price").innerHTML = "Please digit a number";
 }
