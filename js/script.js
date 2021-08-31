@@ -15,35 +15,48 @@
 // 1 ask user how many km
 
 var kiloMeters = parseInt(prompt("How many km are you going to cover?"));
-console.log("km: ", kiloMeters);
+// console.log("km: ", kiloMeters);
 
-if (isNaN(kiloMeters) === false) {
-	document.getElementById("kilometers").innerHTML = kiloMeters;
-} else {
-	document.getElementById("kilometers").innerHTML = "Please digit a number";
-}
+// if (isNaN(kiloMeters) === false) {
+// 	document.getElementById("kilometers").innerHTML = kiloMeters;
+// } else {
+// 	document.getElementById("kilometers").innerHTML = "Please digit a number";
+// }
 
-if (kiloMeters > 0) {
-	document.getElementById("kilometers").innerHTML = kiloMeters;
-} else {
-	document.getElementById("kilometers").innerHTML = "Please digit a number";
+// if (kiloMeters > 0) {
+// 	document.getElementById("kilometers").innerHTML = kiloMeters;
+// } else {
+// 	document.getElementById("kilometers").innerHTML = "Please digit a number";
+// }
+
+while (isNaN(kiloMeters) || kiloMeters <= 0) {
+	kiloMeters = parseInt(prompt("Please, digit a number."));
 }
+console.log(kiloMeters);
+document.getElementById("kilometers").innerHTML = kiloMeters;
+
 // 2 ask user age
 
 var userAge = parseInt(prompt("How old are you?"));
-console.log("Age: ", userAge);
+// console.log("Age: ", userAge);
 
-if (isNaN(userAge) === false) {
-	document.getElementById("age").innerHTML = userAge;
-} else {
-	document.getElementById("age").innerHTML = "Please digit a number";
-}
+// if (isNaN(userAge) === false) {
+// 	document.getElementById("age").innerHTML = userAge;
+// } else {
+// 	document.getElementById("age").innerHTML = "Please digit a number";
+// }
 
-if (userAge >= 0) {
-	document.getElementById("age").innerHTML = userAge;
-} else {
-	document.getElementById("age").innerHTML = "Please digit a number";
+// if (userAge >= 0) {
+// 	document.getElementById("age").innerHTML = userAge;
+// } else {
+// 	document.getElementById("age").innerHTML = "Please digit a number";
+// }
+
+while (isNaN(userAge) || userAge <= 0) {
+	userAge = parseInt(prompt("Please, digit a number."));
 }
+console.log(userAge);
+document.getElementById("age").innerHTML = userAge;
 
 // 3 ticket price is 0.21$ / km
 // 4 20% discount for <18 people age
@@ -51,33 +64,33 @@ if (userAge >= 0) {
 
 var price;
 
-if (userAge < 18 && isNaN(userAge) === false) {
-	var price = (0.21 * kiloMeters * 20) / 100;
-} else if (userAge > 65 && isNaN(userAge) === false) {
-	var price = (0.21 * kiloMeters * 40) / 100;
-} else if (isNaN(userAge) === false) {
+if (userAge < 18 && !isNaN(userAge)) {
+	var price = (0.21 * kiloMeters * 80) / 100;
+} else if (userAge > 65 && !isNaN(userAge)) {
+	var price = (0.21 * kiloMeters * 60) / 100;
+} else if (!isNaN(userAge)) {
 	var price = 0.21 * kiloMeters;
 }
 
 // 6 final price has 2 decimals
 
-price = parseFloat(price).toFixed(2);
+document.getElementById("price").innerHTML = parseFloat(price).toFixed(2) + "€";
 
-if (kiloMeters >= 0) {
-	document.getElementById("price").innerHTML = price;
-} else if (userAge >= 0) {
-	document.getElementById("price").innerHTML = price;
-} else if (price >= 0) {
-	document.getElementById("price").innerHTML = price;
-} else {
-	document.getElementById("price").innerHTML = "Please digit a number";
-}
+// if (kiloMeters >= 0) {
+// 	document.getElementById("price").innerHTML = price;
+// } else if (userAge >= 0) {
+// 	document.getElementById("price").innerHTML = price;
+// } else if (price >= 0) {
+// 	document.getElementById("price").innerHTML = price;
+// } else {
+// 	document.getElementById("price").innerHTML = "Please digit a number";
+// }
 
-if (isNaN(price) === false) {
-	document.getElementById("price").innerHTML = price;
-} else {
-	document.getElementById("price").innerHTML = "Please digit a number";
-}
+// if (isNaN(price) === false) {
+// 	document.getElementById("price").innerHTML = price;
+// } else {
+// 	document.getElementById("price").innerHTML = "Please digit a number";
+// }
 
 // if (isNaN(kiloMeters) && isNaN(userAge) === false) {
 // 	isNaN(price) === false;
